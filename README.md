@@ -1,90 +1,83 @@
-# Memo App
+# Memo App 📝
 
-This is a simple Flask-based memo application that allows users to view, create, and edit a single memo. It uses SQLite as the database via SQLAlchemy, and Bulma CSS for basic styling.
+A simple memo application built with Flask and SQLAlchemy.  
+You can create, view, and edit memos via a web interface.
 
-## Features
+---
 
-- View all memos sorted by title
-- Create a new memo (with default title/body)
-- Edit existing memos
-- Persistent storage via SQLite and SQLAlchemy ORM
-
-## Tech Stack
+## 🧰 Technologies Used
 
 - Python 3.x
 - Flask
-- Flask-SQLAlchemy
-- Bulma CSS (via CDN)
+- SQLAlchemy
+- SQLite (`instance/memo_edit.sqlite`)
 
-## Setup Instructions
+---
 
-1. **Clone the repository**
+## 🚀 Setup Instructions
 
-```bash
-git clone https://github.com/yourusername/memo_app.git
-cd memo_app
-```
-
-2. **Create virtual environment (recommended)**
+1. Create and activate a virtual environment:
 
 ```bash
-python3 -m venv venv
-source venv/bin/activate  # or `venv\Scripts\activate` on Windows
+python3 -m venv memo_env
+source memo_env/bin/activate  # On Windows: memo_env\Scripts\activate
 ```
 
-3. **Install dependencies**
+2. Install required packages:
 
 ```bash
-pip install -r requirements.txt
+pip install flask sqlalchemy
 ```
 
-4. **Run the app**
+3. Run the Flask application:
 
 ```bash
-python memo_edit_app.py
+export FLASK_APP=memo_edit_app.py    # macOS / Linux
+# or
+set FLASK_APP=memo_edit_app.py       # Windows
+
+flask run
 ```
 
-5. **Access in browser**
+---
 
-Open `http://localhost:5000` in your browser.
-
-## Directory Structure
+## 📁 Project Structure
 
 ```
 memo_app/
 ├── memo_edit_app.py         # Main Flask application
 ├── templates/
-│   ├── base.html            # Base layout
+│   ├── base.html            # Base layout template
 │   ├── list.html            # Memo list page
 │   └── memo.html            # Memo editing page
-└── requirements.txt         # Python dependencies
+├── instance/
+│   └── memo_edit.sqlite     # SQLite database (ignored by Git)
+├── memo_env/                # Virtual environment (ignored by Git)
+├── .gitignore
+└── README.md
 ```
 
-## 📌 Notes
+---
 
-- Memos are stored in a SQLite database (`sqlite:///memo.db`).
-- The app always shows one "CREATE" item to simulate new memo creation.
+## 📌 Files/Folders Ignored by Git (`.gitignore`)
 
-## 🔐 What to exclude from GitHub?
+The following are excluded from Git tracking:
 
-- **Virtual environment directory** (`venv/`): Add this to `.gitignore`.
-- **`.env` files or secrets** (not used here, but if you add any secret key or DB credentials later, hide them).
-- **Database files** (`*.db`) if you want a clean repo without local data.
+- `.DS_Store`: macOS system metadata file
+- `memo_env/`: Python virtual environment
+- `instance/`: Contains the database and app-specific data
 
-```
-venv/
-__pycache__/
-*.pyc
-*.db
-.env
-```
+---
 
-## 💡 To Do
+## 💡 Notes
 
-- Add user authentication
-- Enable memo deletion
-- Improve UI with better styles or different framework (e.g., Tailwind, Bootstrap)
+- `requirements.txt` is not used. Dependencies must be installed manually.
+- If the database file is missing, it's recommended to implement automatic creation on first access (ask if you'd like help with this feature).
 
-## License
+---
 
-MIT
+## 📜 License
+
+This project is licensed under the MIT License (add details as needed).
+
+---
