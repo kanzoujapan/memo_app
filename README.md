@@ -49,14 +49,16 @@ Flask と **Tailwind CSS** を使用した、モダンでスタイリッシュ�
    git clone https://github.com/kanzoujapan/memo_app.git
    cd memo_app
 
-## プロジェクト構成
+## 🗂 プロジェクト構成
 
-memo_app/
-├── memo_edit_app.py
-├── templates/
-│   ├── base.html
-│   ├── list.html
-│   └── memo.html 
-├── instance/
-│   └── memo_edit.sqlite
-└── README.md
+- `memo_app/`
+  - `memo_edit_app.py`  
+    アプリ本体（Flask エントリポイント）
+  - `templates/`  
+    ├─ `base.html` — ベースレイアウト  
+    ├─ `list.html` — メモ一覧画面  
+    └─ `memo.html` — メモ編集画面  
+  - `instance/`  
+    └─ `memo_edit.sqlite` — SQLite データベース  
+  - `README.md`  
+    このファイル
