@@ -1,53 +1,52 @@
-# メモアプリ
+# Memo App
 
-Flask と Bulma CSS を使用したシンプルなメモアプリケーションです。
+Flask と **Tailwind CSS** を使用した、モダンでスタイリッシュなメモアプリケーションです。
 
-## 主な機能
+---
 
-- メモの作成と表示
-- Bulma によるレスポンシブデザイン
-- SQLite データベースとの連携
-- Flask によるルーティングとテンプレートレンダリング
+## 📸 デモスクリーンショット
 
-## インストール手順
+ 
+![メモ一覧](assets/top_image)  
+![メモ編集](assets/edit_image) 
 
-### 1. リポジトリをクローン
+---
 
-```bash
-git clone https://github.com/kanzoujapan/memo_app.git
-```
+## 🚀 目次
 
-### 2. （任意）仮想環境を作成
+- [✨ 特徴](#-特徴)  
+- [📦 技術スタック](#-技術スタック)  
+- [⚙️ インストール・起動方法](#️-インストール・起動方法)  
+- [🗂 プロジェクト構成](#-プロジェクト構成)  
+- [🎨 デザイン](#-デザイン)  
+- [🤝 貢献について](#-貢献について)  
+- [📝 ライセンス](#-ライセンス)  
 
-```bash
-python3 -m venv venv
-source venv/bin/activate  
-```
+---
 
-## アプリの起動
+## ✨ 特徴
 
-```bash
-python app.py
-```
+- **グラデーションヘッダー** と **レスポンシブグリッド** を活用した一覧画面  
+- **フォーカスリング** や **ホバーエフェクト** でインタラクティブな入力フォーム  
+- SQLite をバックエンドに使ったシンプル CRUD  
+- 単一ファイルで動作する軽量設計  
 
-起動後、ブラウザで `http://127.0.0.1:5000/` にアクセスしてください。
+---
 
-## プロジェクト構成
+## 📦 技術スタック
 
-```
-memo_app/
-├── app.py
-├── templates/
-│   ├── base.html
-│   ├── list.html
-│   └── memo.html 
-├── instance/
-│   └── ...
-├── memo_edit.sqlite
-└── README.md
+| レイヤー     | 技術・ライブラリ           |
+| ------------ | -------------------------- |
+| Backend      | Python 3.x, Flask         |
+| Database     | SQLite                    |
+| Frontend     | Tailwind CSS (CDN)        |
+| Templating   | Jinja2                    |
 
-```
+---
 
-## 補足
+## ⚙️ インストール・起動方法
 
-- .gitignoreに/instanceと仮想環境memo_envが入っています
+1. **リポジトリをクローン**  
+   ```bash
+   git clone https://github.com/kanzoujapan/memo_app.git
+   cd memo_app
