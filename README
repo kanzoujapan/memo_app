@@ -1,0 +1,53 @@
+# メモアプリ
+
+Flask と Bulma CSS を使用したシンプルなメモアプリケーションです。
+
+## 主な機能
+
+- メモの作成と表示
+- Bulma によるレスポンシブデザイン
+- SQLite データベースとの連携
+- Flask によるルーティングとテンプレートレンダリング
+
+## インストール手順
+
+### 1. リポジトリをクローン
+
+```bash
+git clone https://github.com/kanzoujapan/memo_app.git
+```
+
+### 2. （任意）仮想環境を作成
+
+```bash
+python3 -m venv venv
+source venv/bin/activate  
+```
+
+## アプリの起動
+
+```bash
+python app.py
+```
+
+起動後、ブラウザで `http://127.0.0.1:5000/` にアクセスしてください。
+
+## プロジェクト構成
+
+```
+memo_app/
+├── app.py
+├── templates/
+│   ├── base.html
+│   ├── list.html
+│   └── memo.html 
+├── instance/
+│   └── ...
+├── memo_edit.sqlite
+└── README.md
+
+```
+
+## 補足
+
+- .gitignoreに/instanceと仮想環境memo_envが入っています
